@@ -1,12 +1,14 @@
 import DeployButton from "@/components/deploy-button";
 import { EnvVarWarning } from "@/components/env-var-warning";
 import HeaderAuth from "@/components/header-auth";
-import { ThemeSwitcher } from "@/components/theme-switcher";
+// import { ThemeSwitcher } from "@/components/theme-switcher";
 import { hasEnvVars } from "@/utils/supabase/check-env-vars";
 import { GeistSans } from "geist/font/sans";
-import { ThemeProvider } from "next-themes";
+// import { ThemeProvider } from "next-themes";
 import Link from "next/link";
+import { Theme, ThemePanel } from "@radix-ui/themes";
 import "./globals.css";
+import "@radix-ui/themes/styles.css";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -26,11 +28,17 @@ export default function RootLayout({
   return (
     <html lang="en" className={GeistSans.className} suppressHydrationWarning>
       <body className="bg-background text-foreground">
-        <ThemeProvider
+        {/* <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
+        > */}
+        <Theme
+          accentColor="crimson"
+          grayColor="sand"
+          radius="large"
+          scaling="95%"
         >
           <main className="min-h-screen flex flex-col items-center">
             <div className="flex-1 w-full flex flex-col gap-20 items-center">
@@ -61,11 +69,12 @@ export default function RootLayout({
                     Supabase
                   </a>
                 </p>
-                <ThemeSwitcher />
+                {/* <ThemeSwitcher /> */}
               </footer>
             </div>
           </main>
-        </ThemeProvider>
+        </Theme>
+        {/* </ThemeProvider> */}
       </body>
     </html>
   );

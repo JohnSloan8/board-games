@@ -1,0 +1,76 @@
+{
+  "Bohnanza": {
+    "image": "image.png",
+    "description": "plant beans",
+    "dictionary": {
+      "plant": {
+        "orders": [
+          {
+            "english": "you have to plant your first card",
+            "irish": ""
+          }
+        ],
+        "statements": [
+          {
+            "english": "I will plant ___",
+            "irish": ""
+          }
+        ]
+      },
+      "turn cards": {
+        "orders": [
+          {
+            "english": "turn over two cards",
+            "irish": ""
+          }
+        ],
+        "statements": [
+          {
+            "english": "I will turn over two cards",
+            "irish": ""
+          }
+        ]
+      },
+      "trade": {
+        "orders": [
+          {
+            "english": "give me ___",
+            "irish": ""
+          }
+        ],
+        "statements": [
+          {
+            "english": "I heve ___",
+            "irish": ""
+          }
+        ],
+        "questions": [
+          {
+            "english": "Do you heve any ___?",
+            "irish": ""
+          }
+        ]
+      },
+      "pick cards": {
+        "orders": [
+          {
+            "english": "pick up three cards",
+            "irish": ""
+          }
+        ],
+        "statements": [
+          {
+            "english": "I will pick up three cards",
+            "irish": ""
+          }
+        ],
+        "questions": [
+          {
+            "english": "Did you pick up three cards?",
+            "irish": ""
+          }
+        ]
+      }
+    }
+  }
+}
