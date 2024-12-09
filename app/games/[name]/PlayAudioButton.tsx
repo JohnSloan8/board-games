@@ -2,26 +2,46 @@
 
 // import { PlayIcon, StopIcon } from "@/icons";
 import { PlayIcon, Square } from "lucide-react";
-
-import { useRef, useState } from "react";
+import Spinner from "@/components/Spinner";
+import getSynthesis from "./getSynthesis";
+import { useEffect, useRef, useState } from "react";
 
 interface PlayAudioButtonProps {
-  src: string | null;
-  size?: number;
+  text: string;
+  audioName: string;
 }
 
 export default function PlayAudioButton({
-  src,
-  size = 24,
+  text,
+  audioName,
 }: PlayAudioButtonProps) {
+  const [firstRender, setFirstRender] = useState(true);
   const [audioPlaying, setAudioPlaying] = useState(false);
+  const [gettingSynthesis, setGettingSynthesis] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
+  const [audioURL, setAudioURL] = useState<string | null>(
+    `${process.env.NEXT_PUBLIC_SUPABASE_URL}${process.env.NEXT_PUBLIC_AUDIO_STORAGE_PATH}${audioName}.mp3`
+  );
 
   const playAudio = () => {
     if (audioRef.current !== undefined) {
       if (audioRef.current !== null) {
-        void audioRef.current.play();
-        setAudioPlaying(true);
+        try {
+          void audioRef.current.play().catch((error) => {
+            console.log("gettingSynthesis");
+            setGettingSynthesis(true);
+            setAudioURL(null);
+            getSynthesis(text, audioName).then(() => {
+              setGettingSynthesis(false);
+              setAudioURL(
+                `${process.env.NEXT_PUBLIC_SUPABASE_URL}${process.env.NEXT_PUBLIC_AUDIO_STORAGE_PATH}${audioName}.mp3`
+              );
+            });
+          });
+          setAudioPlaying(true);
+        } catch {
+          console.log("playAudio error");
+        }
       } else {
         console.log("audio.current === null");
       }
@@ -44,9 +64,25 @@ export default function PlayAudioButton({
     }
   };
 
+  useEffect(() => {
+    if (firstRender) {
+      setFirstRender(false); // Skip the first render
+      return;
+    }
+    if (audioRef.current !== undefined) {
+      if (audioRef.current !== null) {
+        void audioRef.current.play().catch((error) => {
+          console.log("error", error);
+        });
+      }
+    }
+  }, [audioURL]);
+
   return (
     <div>
-      {audioPlaying ? (
+      {gettingSynthesis ? (
+        <Spinner />
+      ) : audioPlaying ? (
         <button
           className="w-7 h-7 flex justify-center items-center"
           onClick={stopAudio}
@@ -61,7 +97,7 @@ export default function PlayAudioButton({
           <PlayIcon />
         </button>
       )}
-      <audio src={src !== null ? src : ""} ref={audioRef} onEnded={stopAudio} />
+      <audio src={audioURL} ref={audioRef} onEnded={stopAudio} />
     </div>
   );
 }

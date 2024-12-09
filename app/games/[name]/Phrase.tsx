@@ -1,6 +1,6 @@
 import PlayAudioButton from "./PlayAudioButton";
 import { Text } from "@radix-ui/themes";
-import getSynthesis from "./getSynthesis";
+import getSynthesis from "./getSynthesisAudio";
 import { useEffect } from "react";
 import type { Dispatch, SetStateAction } from "react";
 
@@ -20,18 +20,22 @@ const Phrase = ({ phrase }: PhraseProps) => {
   //   void updateSynthesis();
   // }
   // }, []);
+  console.log("phrase:", phrase);
+
+  const audioName = `${phrase.english.replace(/ /g, "_")}`;
+  console.log("audioName:", audioName);
 
   return (
     <div className="rounded-xl bg-white p-2 mb-2 shadow-lg w-full">
-      <div className="w-full justify-center flex ">
-        <div className="grow">
-          <Text size="2">{phrase.irish}</Text>
-          <Text size="2">{phrase.english}</Text>
+      <div className="w-full flex justify-between">
+        <div className="flex flex-col justify">
+          <Text size="3">{phrase.irish}</Text>
+          <Text size="3" color="gray">
+            {phrase.english}
+          </Text>
         </div>
         <div className="flex items-center flex-row">
-          <PlayAudioButton
-            src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}${process.env.NEXT_PUBLIC_AUDIO_STORAGE_PATH}${phrase.irish.replace(/ /g, "_")}.mp3`}
-          />
+          <PlayAudioButton text={phrase.irish} audioName={audioName} />
         </div>
       </div>
     </div>

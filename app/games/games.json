@@ -3,71 +3,91 @@
     "image": "image.png",
     "description": "plant beans",
     "dictionary": {
-      "plant": {
+      "beans": {
+        "names": [
+          {
+            "english": "red bean",
+            "irish": "ponaire dhearg"
+          },
+          {
+            "english": "blue bean",
+            "irish": "ponaire ghorm"
+          }
+        ]
+      },
+      "counting": {
+        "names": [
+          {
+            "english": "one",
+            "irish": "a haon"
+          }
+        ]
+      },
+      "1. plant": {
         "orders": [
           {
-            "english": "you have to plant your first card",
-            "irish": ""
+            "english": "you have to plant your first bean",
+            "irish": "caithfidh tú an chead ponaire a chur"
           }
         ],
         "statements": [
           {
             "english": "I will plant ___",
-            "irish": ""
+            "irish": "cuirfidh mé ___"
           }
         ]
       },
-      "turn cards": {
+      "2. turn cards": {
         "orders": [
           {
             "english": "turn over two cards",
-            "irish": ""
+            "irish": "tiontaigh dhá chárta"
           }
         ],
         "statements": [
           {
             "english": "I will turn over two cards",
-            "irish": ""
+            "irish": "tiontóidh mé dhá chárta"
           }
         ]
       },
-      "trade": {
+      "3. trade": {
         "orders": [
           {
             "english": "give me ___",
-            "irish": ""
+            "irish": "tabhair ___ dom"
           }
         ],
         "statements": [
           {
-            "english": "I heve ___",
-            "irish": ""
+            "english": "I have ___",
+            "irish": "tá ___ agam"
           }
         ],
         "questions": [
           {
-            "english": "Do you heve any ___?",
-            "irish": ""
+            "english": "Do you have any ___?",
+            "irish": "an bhfuil ___ agat?"
           }
         ]
       },
-      "pick cards": {
+      "4. pick cards": {
         "orders": [
           {
             "english": "pick up three cards",
-            "irish": ""
+            "irish": "pioc suas trí chárta"
           }
         ],
         "statements": [
           {
             "english": "I will pick up three cards",
-            "irish": ""
+            "irish": "piocfaidh mé suas trí chárta"
           }
         ],
         "questions": [
           {
             "english": "Did you pick up three cards?",
-            "irish": ""
+            "irish": "Ar phioc tú suas trí chárta"
           }
         ]
       }

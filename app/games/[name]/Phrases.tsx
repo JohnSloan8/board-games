@@ -9,7 +9,7 @@ const Phrases = ({ phrases }: PhrasesProps) => {
   return (
     <>
       {phrases.map((phrase: any) => (
-        <div key={phrase}>
+        <div key={phrase.english}>
           <Phrase phrase={phrase} />
         </div>
       ))}
