@@ -4,7 +4,7 @@ import basicsData from "../basics.json";
 import GameTabs from "./GameTabs";
 
 interface PageProps {
-  params: { name: string };
+  params: Promise<any>;
 }
 
 export default async function Page({ params }: PageProps) {

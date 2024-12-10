@@ -13,22 +13,22 @@ const Phrases = ({ phrases, phraseType }: PhrasesProps) => {
     <Flex direction="column" gap="3">
       {phraseType === "Q&A"
         ? phrases.map((phrase: any) => (
-            <Flex direction="column" gap="1" key={crypto.randomUUID()}>
+            <Flex direction="column" gap="1" key={phrase.irish}>
               {phrase.questions.map((phrase: any) => (
-                <div key={crypto.randomUUID()}>
-                  <Phrase phrase={phrase} phraseType={phraseType} />
+                <div key={phrase.english}>
+                  <Phrase phrase={phrase} />
                 </div>
               ))}
               {phrase.answers.map((phrase: any) => (
-                <div key={crypto.randomUUID()}>
-                  <Phrase phrase={phrase} phraseType={phraseType} />
+                <div key={phrase.english}>
+                  <Phrase phrase={phrase} />
                 </div>
               ))}
             </Flex>
           ))
         : phrases.map((phrase: any) => (
-            <div key={crypto.randomUUID()}>
-              <Phrase phrase={phrase} phraseType={phraseType} />
+            <div key={phrase.english}>
+              <Phrase phrase={phrase} />
             </div>
           ))}
     </Flex>

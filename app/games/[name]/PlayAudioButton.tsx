@@ -19,7 +19,7 @@ export default function PlayAudioButton({
   const [audioPlaying, setAudioPlaying] = useState(false);
   const [gettingSynthesis, setGettingSynthesis] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
-  const [audioURL, setAudioURL] = useState<string | null>(
+  const [audioURL, setAudioURL] = useState<string | undefined>(
     `${process.env.NEXT_PUBLIC_SUPABASE_URL}${process.env.NEXT_PUBLIC_AUDIO_STORAGE_PATH}${audioName}.mp3`
   );
 
@@ -30,7 +30,7 @@ export default function PlayAudioButton({
           void audioRef.current.play().catch((error) => {
             console.log("gettingSynthesis");
             setGettingSynthesis(true);
-            setAudioURL(null);
+            setAudioURL(undefined);
             getSynthesis(text, audioName).then(() => {
               setGettingSynthesis(false);
               setAudioURL(
