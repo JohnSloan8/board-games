@@ -84,17 +84,17 @@ export default function PlayAudioButton({
         <Spinner />
       ) : audioPlaying ? (
         <button
-          className="w-7 h-7 flex justify-center items-center"
+          className="flex justify-center items-center"
           onClick={stopAudio}
         >
           <Square />
         </button>
       ) : (
         <button
-          className="w-7 h-7 flex justify-center items-center"
+          className="flex justify-center items-center"
           onClick={playAudio}
         >
-          <PlayIcon />
+          <PlayIcon size="16" />
         </button>
       )}
       <audio src={audioURL} ref={audioRef} onEnded={stopAudio} />

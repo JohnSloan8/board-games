@@ -1,0 +1,106 @@
+{
+  "counting (objects)": {
+    "statements": [
+      {
+        "english": "1 ___",
+        "irish": "___ amhain"
+      },
+      {
+        "english": "2 ___",
+        "irish": "dhá ___"
+      },
+      {
+        "english": "3 ___",
+        "irish": "trí ___"
+      },
+      {
+        "english": "4 ___",
+        "irish": "ceithre ___"
+      },
+      {
+        "english": "5 ___",
+        "irish": "cuig ___"
+      },
+      {
+        "english": "6 ___",
+        "irish": "sé ___"
+      },
+      {
+        "english": "7 ___",
+        "irish": "seacht ___"
+      },
+      {
+        "english": "8 ___",
+        "irish": "ocht ___"
+      },
+      {
+        "english": "9 ___",
+        "irish": "naoi ___"
+      },
+      {
+        "english": "10 ___",
+        "irish": "deich ___"
+      },
+      {
+        "english": "11 ___",
+        "irish": "aon ___ déag"
+      },
+      {
+        "english": "12 ___",
+        "irish": "dhá ___ déag"
+      }
+    ]
+  },
+  "counting (people)": {
+    "statements": [
+      {
+        "english": "1 person",
+        "irish": "duine amháin"
+      },
+      {
+        "english": "2 people",
+        "irish": "beirt"
+      },
+      {
+        "english": "3 people",
+        "irish": "triúr"
+      },
+      {
+        "english": "4 people",
+        "irish": "ceathrar"
+      },
+      {
+        "english": "5 people",
+        "irish": "cúigear"
+      },
+      {
+        "english": "6 people",
+        "irish": "seisear"
+      },
+      {
+        "english": "7 people",
+        "irish": "seachtar"
+      },
+      {
+        "english": "8 people",
+        "irish": "ochtar"
+      },
+      {
+        "english": "9 people",
+        "irish": "naonúr"
+      },
+      {
+        "english": "10 people",
+        "irish": "deichniúr"
+      },
+      {
+        "english": "11 people",
+        "irish": "aon duine dhéag"
+      },
+      {
+        "english": "12 people",
+        "irish": "dhá dhuine dhéag"
+      }
+    ]
+  }
+}

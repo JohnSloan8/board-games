@@ -6,14 +6,17 @@ interface gameStageProps {
   gameStageData: any;
 }
 
-const GameStage = ({ gameStage, gameStageData }: gameStageProps) => {
+const GameStage = ({ gameStageData }: gameStageProps) => {
   const phraseTypes = Object.keys(gameStageData);
   return (
     <>
       {phraseTypes.map((phraseType) => (
         <div key={phraseType}>
           <Text size="2">{phraseType}</Text>
-          <Phrases phrases={gameStageData[phraseType]} />
+          <Phrases
+            phrases={gameStageData[phraseType]}
+            phraseType={phraseType}
+          />
         </div>
       ))}
     </>

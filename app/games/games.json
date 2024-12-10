@@ -3,93 +3,211 @@
     "image": "image.png",
     "description": "plant beans",
     "dictionary": {
-      "beans": {
-        "names": [
-          {
-            "english": "red bean",
-            "irish": "ponaire dhearg"
-          },
-          {
-            "english": "blue bean",
-            "irish": "ponaire ghorm"
-          }
-        ]
+      "basics": ["counting (objects)", "counting (people)"],
+      "items": {
+        "beans": {
+          "statements": [
+            {
+              "english": "Cocoa bean",
+              "irish": "pónaire chocoa"
+            },
+            {
+              "english": "Garden bean",
+              "irish": "pónaire ghairdín"
+            },
+            {
+              "english": "Red bean",
+              "irish": "pónaire dhearg"
+            },
+            {
+              "english": "Black-Eyed bean",
+              "irish": "pónaire dhúshúileach"
+            },
+            {
+              "english": "Soy bean",
+              "irish": "pónaire shoighe"
+            },
+            {
+              "english": "Green bean",
+              "irish": "pónaire ghlas"
+            },
+            {
+              "english": "Stink bean",
+              "irish": "pónaire bhraon"
+            },
+
+            {
+              "english": "Chili bean",
+              "irish": "pónaire chili"
+            },
+            {
+              "english": "Blue bean",
+              "irish": "pónaire ghorm"
+            },
+            {
+              "english": "Wax bean",
+              "irish": "pónaire chéir"
+            },
+            {
+              "english": "Coffee bean",
+              "irish": "pónaire chaife"
+            }
+          ]
+        }
       },
-      "counting": {
-        "names": [
-          {
-            "english": "one",
-            "irish": "a haon"
-          }
-        ]
-      },
-      "1. plant": {
-        "orders": [
-          {
-            "english": "you have to plant your first bean",
-            "irish": "caithfidh tú an chead ponaire a chur"
-          }
-        ],
-        "statements": [
-          {
-            "english": "I will plant ___",
-            "irish": "cuirfidh mé ___"
-          }
-        ]
-      },
-      "2. turn cards": {
-        "orders": [
-          {
-            "english": "turn over two cards",
-            "irish": "tiontaigh dhá chárta"
-          }
-        ],
-        "statements": [
-          {
-            "english": "I will turn over two cards",
-            "irish": "tiontóidh mé dhá chárta"
-          }
-        ]
-      },
-      "3. trade": {
-        "orders": [
-          {
-            "english": "give me ___",
-            "irish": "tabhair ___ dom"
-          }
-        ],
-        "statements": [
-          {
-            "english": "I have ___",
-            "irish": "tá ___ agam"
-          }
-        ],
-        "questions": [
-          {
-            "english": "Do you have any ___?",
-            "irish": "an bhfuil ___ agat?"
-          }
-        ]
-      },
-      "4. pick cards": {
-        "orders": [
-          {
-            "english": "pick up three cards",
-            "irish": "pioc suas trí chárta"
-          }
-        ],
-        "statements": [
-          {
-            "english": "I will pick up three cards",
-            "irish": "piocfaidh mé suas trí chárta"
-          }
-        ],
-        "questions": [
-          {
-            "english": "Did you pick up three cards?",
-            "irish": "Ar phioc tú suas trí chárta"
-          }
-        ]
+      "stages": {
+        "plant": {
+          "orders": [
+            {
+              "english": "you have to plant your first card",
+              "irish": "Caithfidh tú an chead ponaire"
+            }
+          ],
+          "statements": [
+            {
+              "english": "I will plant ___",
+              "irish": "cuirfidh mé ___"
+            }
+          ],
+          "Q&A": [
+            {
+              "questions": [
+                {
+                  "english": "Which is your first card?",
+                  "irish": "Cé acu ceann do chead chárta?"
+                }
+              ],
+              "answers": [
+                {
+                  "english": "This is my first card",
+                  "irish": "Seo é mo chead chárta"
+                }
+              ]
+            }
+          ]
+        },
+        "turn cards": {
+          "orders": [
+            {
+              "english": "turn over two cards",
+              "irish": "tiontaigh dhá chárta"
+            }
+          ],
+          "statements": [
+            {
+              "english": "I will turn over two cards",
+              "irish": "tiontoidh mé dhá charta."
+            }
+          ]
+        },
+        "trade": {
+          "orders": [
+            {
+              "english": "give me ___",
+              "irish": "tabhair dom ___"
+            }
+          ],
+          "statements": [
+            {
+              "english": "If you give me ___, I will give you ___",
+              "irish": "Má thugann tu ___ dom, tabhairfidh mise ___ duit."
+            }
+          ],
+          "Q&A": [
+            {
+              "questions": [
+                {
+                  "english": "Do you heve any ___?",
+                  "irish": "An bhfuil ___ agat?"
+                },
+                {
+                  "english": "How many ____ do you have?",
+                  "irish": "Cé mhead ___ atá agat?"
+                }
+              ],
+              "answers": [
+                {
+                  "english": "I have ___",
+                  "irish": "Tá ___ agam"
+                },
+                {
+                  "english": "I don’t have any ___",
+                  "irish": "Níl ___ agam"
+                }
+              ]
+            },
+            {
+              "questions": [
+                {
+                  "english": "Would you like ___?",
+                  "irish": "Ar mhaith leat ___?"
+                }
+              ],
+              "answers": [
+                {
+                  "english": "I would like ___",
+                  "irish": "Ba mhaith liom ___ "
+                },
+                {
+                  "english": "I would not like ___",
+                  "irish": "Níor mhaith liom ___"
+                }
+              ]
+            }
+          ]
+        },
+        "pick cards": {
+          "orders": [
+            {
+              "english": "pick up three cards",
+              "irish": ""
+            }
+          ],
+          "statements": [
+            {
+              "english": "I will pick up three cards",
+              "irish": ""
+            }
+          ],
+          "Q&A": [
+            {
+              "questions": [
+                {
+                  "english": "Did you pick up three cards?",
+                  "irish": ""
+                }
+              ],
+              "answers": [
+                {
+                  "english": "Yes",
+                  "irish": ""
+                },
+                {
+                  "english": "No",
+                  "irish": ""
+                }
+              ]
+            }
+          ]
+        },
+        "harvest": {
+          "Q&A": [
+            {
+              "questions": [
+                {
+                  "english": "How many coins do you get?",
+                  "irish": "Cé mhead pingin a fhaigheann tú?"
+                }
+              ],
+              "answers": [
+                {
+                  "english": "I get 4 coins",
+                  "irish": "Faighim ceithre phingin"
+                }
+              ]
+            }
+          ]
+        }
       }
     }
   }
