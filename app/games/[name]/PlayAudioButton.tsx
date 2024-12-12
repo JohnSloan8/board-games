@@ -71,6 +71,8 @@ export default function PlayAudioButton({
     }
     if (audioRef.current !== undefined) {
       if (audioRef.current !== null) {
+        console.log("audioRef.current.src", audioRef.current.src);
+
         void audioRef.current.play().catch((error) => {
           console.log("error", error);
         });

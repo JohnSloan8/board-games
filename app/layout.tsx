@@ -41,7 +41,7 @@ export default function RootLayout({
                   <div className="flex gap-5 items-center font-semibold">
                     <Link href="/games">All Games</Link>
                   </div>
-                  {!hasEnvVars ? <EnvVarWarning /> : <HeaderAuth />}
+                  {/* {!hasEnvVars ? <EnvVarWarning /> : <HeaderAuth />} */}
                 </div>
               </nav>
               <div className="flex flex-col w-full max-w-sm">{children}</div>
