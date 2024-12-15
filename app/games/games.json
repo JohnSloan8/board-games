@@ -8,47 +8,57 @@
         "beans": {
           "statements": [
             {
+              "image": "cocoa-bean.webp",
               "english": "Cocoa bean",
               "irish": "pónaire chocoa"
             },
             {
+              "image": "garden-bean.webp",
               "english": "Garden bean",
               "irish": "pónaire ghairdín"
             },
             {
+              "image": "red-bean.webp",
               "english": "Red bean",
               "irish": "pónaire dhearg"
             },
             {
+              "image": "black-eyed-bean.webp",
               "english": "Black-Eyed bean",
               "irish": "pónaire dhúshúileach"
             },
             {
+              "image": "soy-bean.webp",
               "english": "Soy bean",
               "irish": "pónaire shoighe"
             },
             {
+              "image": "green-bean.webp",
               "english": "Green bean",
               "irish": "pónaire ghlas"
             },
             {
+              "image": "stink-bean.webp",
               "english": "Stink bean",
               "irish": "pónaire bhraon"
             },
-
             {
+              "image": "chili-bean.webp",
               "english": "Chili bean",
               "irish": "pónaire chili"
             },
             {
+              "image": "blue-bean.webp",
               "english": "Blue bean",
               "irish": "pónaire ghorm"
             },
             {
+              "image": "wax-bean.webp",
               "english": "Wax bean",
               "irish": "pónaire chéir"
             },
             {
+              "image": "coffee-bean.webp",
               "english": "Coffee bean",
               "irish": "pónaire chaife"
             }
