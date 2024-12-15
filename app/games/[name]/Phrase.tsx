@@ -1,5 +1,5 @@
 import PlayAudioButton from "./PlayAudioButton";
-import { Avatar, Card, Flex, Text } from "@radix-ui/themes";
+import { Avatar, Card, Flex, Inset, Text } from "@radix-ui/themes";
 
 interface PhraseProps {
   phrase: any;
@@ -10,13 +10,28 @@ const Phrase = ({ phrase }: PhraseProps) => {
   return (
     <Card variant="classic">
       <div className="w-full flex">
-        <Avatar
-          size="3"
-          src={`/images/${phrase.image}`}
-          radius="full"
-          fallback="T"
-          className="pr-2"
-        />
+        {phrase.image !== undefined && (
+          // <Avatar
+          //   size="3"
+          //   src={`/images/${phrase.image}`}
+          //   radius="full"
+          //   fallback="T"
+          //   className="pr-2"
+          // />
+          <Inset clip="padding-box" side="left" pr="current">
+            <img
+              src={`/images/${phrase.image}`}
+              alt="Bold typography"
+              style={{
+                display: "block",
+                objectFit: "cover",
+                width: "44px",
+                height: "64px",
+                backgroundColor: "var(--gray-5)",
+              }}
+            />
+          </Inset>
+        )}
         <div className="w-full flex justify-between">
           <div className="flex flex-col justify">
             <Text as="div" size="2" weight="bold">
