@@ -96,7 +96,7 @@ export default function PlayAudioButton({
           className="flex justify-center items-center"
           onClick={playAudio}
         >
-          <PlayIcon size="16" />
+          <PlayIcon />
         </button>
       )}
       <audio src={audioURL} ref={audioRef} onEnded={stopAudio} />

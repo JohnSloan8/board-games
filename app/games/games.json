@@ -1,9 +1,9 @@
 {
   "Bohnanza": {
-    "image": "image.png",
+    "image": "cover-bohnanza.webp",
     "description": "plant beans",
     "dictionary": {
-      "basics": ["counting (objects)", "counting (people)"],
+      "basics": ["counting (objects)"],
       "items": {
         "beans": {
           "statements": [
@@ -57,16 +57,16 @@
       },
       "stages": {
         "plant": {
-          "orders": [
-            {
-              "english": "you have to plant your first card",
-              "irish": "Caithfidh tú an chead ponaire"
-            }
-          ],
           "statements": [
             {
               "english": "I will plant ___",
               "irish": "cuirfidh mé ___"
+            }
+          ],
+          "orders": [
+            {
+              "english": "you have to plant your first card",
+              "irish": "Caithfidh tú an chead ponaire"
             }
           ],
           "Q&A": [
@@ -87,30 +87,30 @@
           ]
         },
         "turn cards": {
-          "orders": [
-            {
-              "english": "turn over two cards",
-              "irish": "tiontaigh dhá chárta"
-            }
-          ],
           "statements": [
             {
               "english": "I will turn over two cards",
               "irish": "tiontoidh mé dhá charta."
             }
+          ],
+          "orders": [
+            {
+              "english": "turn over two cards",
+              "irish": "tiontaigh dhá chárta"
+            }
           ]
         },
         "trade": {
-          "orders": [
-            {
-              "english": "give me ___",
-              "irish": "tabhair dom ___"
-            }
-          ],
           "statements": [
             {
               "english": "If you give me ___, I will give you ___",
               "irish": "Má thugann tu ___ dom, tabhairfidh mise ___ duit."
+            }
+          ],
+          "orders": [
+            {
+              "english": "give me ___",
+              "irish": "tabhair dom ___"
             }
           ],
           "Q&A": [
@@ -122,7 +122,7 @@
                 },
                 {
                   "english": "How many ____ do you have?",
-                  "irish": "Cé mhead ___ atá agat?"
+                  "irish": "Cé mhéad ___ atá agat?"
                 }
               ],
               "answers": [
@@ -157,16 +157,16 @@
           ]
         },
         "pick cards": {
-          "orders": [
-            {
-              "english": "pick up three cards",
-              "irish": ""
-            }
-          ],
           "statements": [
             {
               "english": "I will pick up three cards",
-              "irish": ""
+              "irish": "Piocfaidh mé suas trí chárta"
+            }
+          ],
+          "orders": [
+            {
+              "english": "pick up three cards",
+              "irish": "Pioc suas trí cártaí"
             }
           ],
           "Q&A": [
@@ -174,17 +174,17 @@
               "questions": [
                 {
                   "english": "Did you pick up three cards?",
-                  "irish": ""
+                  "irish": "Ar phioc tú suas trí chárta?"
                 }
               ],
               "answers": [
                 {
                   "english": "Yes",
-                  "irish": ""
+                  "irish": "Phioc"
                 },
                 {
                   "english": "No",
-                  "irish": ""
+                  "irish": "Níor phioc"
                 }
               ]
             }
@@ -196,7 +196,7 @@
               "questions": [
                 {
                   "english": "How many coins do you get?",
-                  "irish": "Cé mhead pingin a fhaigheann tú?"
+                  "irish": "Cé mhéad pingin a fhaigheann tú?"
                 }
               ],
               "answers": [
@@ -209,6 +209,15 @@
           ]
         }
       }
+    }
+  },
+  "Catan": {
+    "image": "cover-catan.webp",
+    "description": "Colonise an island",
+    "dictionary": {
+      "basics": ["counting (objects)"],
+      "items": {},
+      "stages": {}
     }
   }
 }

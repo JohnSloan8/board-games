@@ -1,5 +1,6 @@
 import { Flex, Text } from "@radix-ui/themes";
 import Phrase from "./Phrase";
+import { v4 as uuidv4 } from "uuid";
 
 interface PhrasesProps {
   phrases: any;
@@ -13,21 +14,21 @@ const Phrases = ({ phrases, phraseType }: PhrasesProps) => {
     <Flex direction="column" gap="3">
       {phraseType === "Q&A"
         ? phrases.map((phrase: any) => (
-            <Flex direction="column" gap="1" key={phrase.irish}>
+            <Flex direction="column" gap="1" key={uuidv4()}>
               {phrase.questions.map((phrase: any) => (
-                <div key={phrase.english}>
+                <div key={uuidv4()} className="bg-blue-200 rounded-xl">
                   <Phrase phrase={phrase} />
                 </div>
               ))}
               {phrase.answers.map((phrase: any) => (
-                <div key={phrase.english}>
+                <div key={uuidv4()} className="bg-amber-200 rounded-xl">
                   <Phrase phrase={phrase} />
                 </div>
               ))}
             </Flex>
           ))
         : phrases.map((phrase: any) => (
-            <div key={phrase.english}>
+            <div key={uuidv4()}>
               <Phrase phrase={phrase} />
             </div>
           ))}

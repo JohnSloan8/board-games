@@ -11,7 +11,7 @@ export default async function Page({ params }: PageProps) {
   const { name } = await params;
   // @ts-ignore
   const gameData = await gamesData[name];
-  const dictionary = await gameData.dictionary;
+  const dictionary = gameData.dictionary;
   const stages = dictionary.stages;
   const items = dictionary.items;
   const basicsList = dictionary.basics;

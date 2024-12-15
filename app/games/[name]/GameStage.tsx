@@ -1,5 +1,10 @@
 import { Text } from "@radix-ui/themes";
 import Phrases from "./Phrases";
+import {
+  MessageCircle,
+  MessageCircleWarning,
+  MessageCircleQuestion,
+} from "lucide-react";
 
 interface gameStageProps {
   gameStage: string;
@@ -12,7 +17,13 @@ const GameStage = ({ gameStageData }: gameStageProps) => {
     <>
       {phraseTypes.map((phraseType) => (
         <div key={phraseType}>
-          <Text size="2">{phraseType}</Text>
+          {phraseType !== "statements" ? (
+            phraseType === "orders" ? (
+              <MessageCircleWarning className="mt-2 mb-1" />
+            ) : (
+              <MessageCircleQuestion className="mt-2 mb-1" />
+            )
+          ) : null}
           <Phrases
             phrases={gameStageData[phraseType]}
             phraseType={phraseType}
